@@ -62,10 +62,10 @@ export default class Accordion extends Component {
     let collapsibleProps = {};
 
     Object.keys(this.props).forEach(key => {
-      if (COLLAPSIBLE_PROPS.includes(key)) {
-        collapsibleProps[key] = this.props[key];
-      } else if (VIEW_PROPS.includes(key)) {
+      if (VIEW_PROPS.includes(key)) {
         viewProps[key] = this.props[key];
+      } else if (COLLAPSIBLE_PROPS.includes(key)) {
+        collapsibleProps[key] = this.props[key];
       }
     });
 
